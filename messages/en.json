@@ -1,0 +1,62 @@
+{
+  "LocaleSwitcher": {
+    "en": "🇺🇸 English",
+    "th": "🇹🇭 Thai",
+    "switchLocale": "{locale, select, en {🇺🇸 English} other {Unknown}}",
+    "label": "Language"
+  },
+  "ThemeSwitch": {
+    "Toggletheme": "Toggle theme",
+    "Light": "Light",
+    "Dark": "Dark",
+    "System": "System"
+  },
+  "Error": {
+    "pageNotFound": "Page not found.",
+    "backToHomepage": "Back to Homepage"
+  },
+  "Navbar": {
+    "account": "User Account",
+    "logout": "Logout",
+    "loading": "Loading...",
+    "SBMS": "Student Behavior Management System"
+  },
+  "Login": {
+    "errorInvalid": "Username or password is incorrect",
+    "success": "Signed in successfully",
+    "welcomeBack": "Welcome back",
+    "pleaseSignIn": "Please sign in.",
+    "username": "Username",
+    "password": " Password",
+    "signingIn": "Signing in...",
+    "signIn": "Sign in",
+    "SBMS": "Student Behavior Management System"
+  },
+  "Logout": {
+    "logout": "Logout",
+    "confirmTitle": "Confirm Logout",
+    "confirmMessage": "Are you sure you want to log out? Logging out will close the current chat session and return you to the sign-in page.",
+    "cancel": "Cancel",
+    "confirm": "Confirm Logout"
+  },
+  "LoadingState": {
+    "loading": "Loading..."
+  },
+  "Landing": {
+    "comingTitle": "The SBMS system is coming soon.",
+    "intro": "We introduce the Student Behavior Management System (SBMS) for modern schools.",
+    "builtForYou": "Built for your school",
+    "highPerfStarter": "A simple, fast, and reliable student behavior management system.",
+    "goal": "Our goal is to make behavior records, conduct scores, and supporting documents easy to manage, traceable, and well-organized.",
+    "ctaHeadline": "Start using SBMS today!.",
+    "getStarted": "Get Started",
+    "poweredBy": "Powered by",
+
+    "sbmsShort": "SBMS is coming",
+    "sbmsBadge": "SBMS • Student Behavior Management System",
+    "sbmsTitle": "Student Behavior Management System",
+    "sbmsSubtitle": "A complete student behavior management solution.",
+    "sbmsSubtitle2": "Record incidents • Calculate scores • Attach documents • Generate reports — all in one place.",
+    "modules": "Core Modules"
+  }
+}
