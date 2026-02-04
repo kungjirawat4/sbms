@@ -71,6 +71,7 @@ export default function LoginPage() {
       description: `${t("welcomeBack")} ${values.username}`,
       variant: "success",
     });
+    router.refresh();
   };
 
   useEffect(() => {
