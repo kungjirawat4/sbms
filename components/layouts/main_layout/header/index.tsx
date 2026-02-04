@@ -102,7 +102,8 @@ import { useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { Bell, Settings } from "lucide-react";
+import { Bell } from "lucide-react";
+import { SettingsIcon } from "@/components/ui/settings";
 
 type Role =
   | "SYSTEM_ADMIN"
@@ -243,7 +244,7 @@ export default function Header() {
               <>
                 <DropdownMenuItem asChild>
                   <Link href="/settings" className="flex items-center gap-2">
-                    <Settings className="h-4 w-4" />
+                    <SettingsIcon className="h-4 w-4" />
                     <span>ตั้งค่า</span>
                   </Link>
                 </DropdownMenuItem>

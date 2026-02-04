@@ -1,5 +1,6 @@
 import LocaleSwitcher from "@/components/common/LocaleSwitcher/LocaleSwitcher";
 import { ThemeSwitch } from "@/components/common/ThemeSwitch/ThemeSwitch";
+import Login_Layout from "@/components/layouts/login_layout";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
@@ -17,18 +18,5 @@ export default function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <div>
-      {children}
-
-      <div className="fixed top-5 right-5">
-        <LocaleSwitcher />
-      </div>
-
-      {/* tailwind ไม่มี right-15 นะ ใช้เป็นค่า custom หรือ right-16 แทน */}
-      <div className="fixed top-5 right-16">
-        <ThemeSwitch />
-      </div>
-    </div>
-  );
+  return <Login_Layout>{children}</Login_Layout>;
 }
