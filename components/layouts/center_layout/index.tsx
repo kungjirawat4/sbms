@@ -1,9 +1,10 @@
 "use client";
 
 import { ReactNode } from "react";
-import { Footer } from "./footer/footer";
+
 import LocaleSwitcher from "@/components/common/LocaleSwitcher/LocaleSwitcher";
 import { ThemeSwitch } from "@/components/common/ThemeSwitch/ThemeSwitch";
+import { Footer } from "../footer/footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -17,7 +18,6 @@ export default function Center_Layout({ children }: LayoutProps) {
         <LocaleSwitcher />
       </div>
 
- 
       <div className="fixed z-10 top-5 right-16">
         <ThemeSwitch />
       </div>

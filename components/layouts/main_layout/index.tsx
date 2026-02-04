@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import { Footer } from "./footer/footer";
+import { Footer } from "../footer/footer";
 import Header from "./header";
 
 interface LayoutProps {
