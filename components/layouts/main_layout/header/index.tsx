@@ -105,6 +105,7 @@ import Link from "next/link";
 
 import { SettingsIcon } from "@/components/ui/settings";
 import { BellIcon } from "@/components/ui/bell";
+import { UserIcon } from "@/components/ui/user";
 
 type Role =
   | "SYSTEM_ADMIN"
@@ -156,27 +157,24 @@ export default function Header() {
   return (
     <header className="flex h-14 items-center justify-between border-b px-4">
       {/* ซ้าย: โลโก้ + ชื่อระบบ */}
-      <div className="flex items-center gap-3">
+      <Link href="/dashboard" className="flex items-center gap-3 group">
         <div className="flex h-10 w-10 items-center justify-center rounded-md">
           <Image
             src="/images/logo/Logo.png"
             alt="logo"
             width={120}
             height={120}
-            className="size-10"
+            className="size-10 transition-transform duration-200 group-hover:scale-105"
             priority
           />
         </div>
 
         {/* ชื่อระบบ */}
         <div className="flex flex-col leading-tight">
-          <span className="text-sm font-semibold">SBMS</span>
-          <span className="text-[11px] text-muted-foreground">
-            {/* Student Behavior Management System */}
-            {t("SBMS")}
-          </span>
+          <span className="text-sm font-semibold ">SBMS</span>
+          <span className="text-[11px] text-muted-foreground">{t("SBMS")}</span>
         </div>
-      </div>
+      </Link>
 
       {/* ขวา: actions */}
       <div className="flex items-center gap-2">
@@ -240,7 +238,17 @@ export default function Header() {
 
             <DropdownMenuSeparator />
 
-            {/* ตั้งค่า (ในเมนู) */}
+            {/* ✅ โปรไฟล์ (ทุก role เห็น) */}
+            <DropdownMenuItem asChild>
+              <Link href="/profile" className="flex items-center gap-2">
+                <UserIcon />
+                <span>โปรไฟล์</span>
+              </Link>
+            </DropdownMenuItem>
+
+            <DropdownMenuSeparator />
+
+            {/* ตั้งค่า (เฉพาะ role ที่มีสิทธิ์) */}
             {canSeeSettings(role) && (
               <>
                 <DropdownMenuItem asChild>
@@ -253,7 +261,7 @@ export default function Header() {
               </>
             )}
 
-            {/* ออกจากระบบ (ของเดิมคุณ) */}
+            {/* ออกจากระบบ */}
             <Logout />
           </DropdownMenuContent>
         </DropdownMenu>
