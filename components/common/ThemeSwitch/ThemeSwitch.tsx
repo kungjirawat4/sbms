@@ -13,6 +13,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useTranslations } from "next-intl";
+import { SunIcon } from "@/components/ui/sun";
+import { MoonIcon } from "@/components/ui/moon";
 
 export function ThemeSwitch() {
   const { setTheme } = useTheme();
@@ -25,8 +27,8 @@ export function ThemeSwitch() {
           size="icon"
           className="flex items-center justify-center shadow-2xl transition-all active:scale-105 dark:bg-gray-950"
         >
-          <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+          <SunIcon className=" scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+          <MoonIcon className="absolute  scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
           <span className="sr-only">{t("Toggletheme")}</span>
         </Button>
       </DropdownMenuTrigger>

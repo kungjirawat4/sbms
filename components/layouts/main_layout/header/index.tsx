@@ -102,8 +102,9 @@ import { useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { Bell } from "lucide-react";
+
 import { SettingsIcon } from "@/components/ui/settings";
+import { BellIcon } from "@/components/ui/bell";
 
 type Role =
   | "SYSTEM_ADMIN"
@@ -181,7 +182,7 @@ export default function Header() {
       <div className="flex items-center gap-2">
         {/* แจ้งเตือน */}
         <Button variant="ghost" size="icon" aria-label="Notifications">
-          <Bell className="h-5 w-5" />
+          <BellIcon />
         </Button>
         <ThemeSwitch />
         <LocaleSwitcher />
